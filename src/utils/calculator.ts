@@ -1,17 +1,7 @@
 import { CommissionBracket, ProfessionalType, CalculationMethod, CalculationResult } from '../types';
+import { COMMISSIONS } from '../constants/commissions';
 
-export const BRACKETS: Record<ProfessionalType, CommissionBracket[]> = {
-  fisio: [
-    { min: 0, max: 2000, professionalRate: 70, companyRate: 30 },
-    { min: 2000, max: 3000, professionalRate: 75, companyRate: 25 },
-    { min: 3000, max: Infinity, professionalRate: 80, companyRate: 20 },
-  ],
-  nutri: [
-    { min: 0, max: 500, professionalRate: 70, companyRate: 30 },
-    { min: 500, max: 1000, professionalRate: 75, companyRate: 25 },
-    { min: 1000, max: Infinity, professionalRate: 80, companyRate: 20 },
-  ],
-};
+export const BRACKETS = COMMISSIONS;
 
 /**
  * Perform commission, split, and tax calculations.
